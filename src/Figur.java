@@ -1,45 +1,13 @@
 import java.util.Scanner;
 
 public abstract class Figur {
-    public int x,y;
+    private int x, y;
 
-    public int getX() {
-        return x;
-    }
+    //проверка существования фигуры
+    public abstract boolean breedExist(int newX, int newY);
+    //определение площади
 
-    public void setX(int x) {
-        this.x = x;
-    }
+    public abstract double square();
 
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-
-
-    public Fegur () {
-        Scanner cs = new Scanner(System.in);
-        System.out.println("Введите координату X");
-        int newX
-    }
-
-
-    public abstract boolean belongPointShape (int x,int y) {
-
-
-
-    }
-    public abstract int areaFigure () {
-
-    }
-
-    public abstract int enteringField () {
-
-    }
-
-
+    public abstract void inputNumbers();
 }
