@@ -1,8 +1,14 @@
 import java.util.Scanner;
 
-public class Circl extends Figur{
+public class Circle extends Figur{
 
     private int x, y, R;
+
+    public Circle(int x, int y, int r) {
+        this.x = x;
+        this.y = y;
+        R = r;
+    }
 
     public int getR() {
         return R;
