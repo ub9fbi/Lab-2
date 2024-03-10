@@ -35,7 +35,7 @@ public class Circle extends Figur{
     }
 
     @Override
-    public boolean breedExist(int newX, int newY) {
+    public boolean breedExist(int x, int y) {
         double L = Math.sqrt(Math.pow((x - this.x), 2) + Math.pow((y - this.y), 2));
         return L <= R;
     }

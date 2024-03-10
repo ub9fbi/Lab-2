@@ -4,7 +4,7 @@ public abstract class Figur {
     private int x, y;
 
     //проверка существования фигуры
-    public abstract boolean breedExist(int newX, int newY);
+    public abstract boolean breedExist(int x,int y);
     //определение площади
 
     public abstract double square();
