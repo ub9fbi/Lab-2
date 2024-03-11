@@ -12,10 +12,13 @@ public class Main {
         while (k < 3) {
             System.out.println("Введите: 1 - создать круг, 2 - создать прямоугольник, 3 - выйти");
             k = scanner.nextInt();
-            if (k == 1){
-                circl.inputNumbers();
-                System.out.println("Площадь круга: " + circl.square());
-            } else if (k == 2) {
+            if (k == 1 || circl.breedExist(0,0) == true){
+
+                    circl.inputNumbers();
+                    System.out.println("Площадь круга: " + circl.square());
+
+            } else if (k == 2 || rectangle.breedExist(0,0) == true) {
+
                 rectangle.inputNumbers();
                 System.out.println("Площадь прямоугльника: " + rectangle.square());
             } else if (k == 3) {
