@@ -4,10 +4,14 @@ public class Rectangle extends Figur{
     private int x,y,length,width;
 
     public Rectangle(int x, int y, int length, int width) {
-        this.x = x;
-        this.y = y;
-        this.length = length;
-        this.width = width;
+        if (width < 0 || length < 0) {
+            System.out.println("Ширина и высота должны быть больше нуля");
+        } else {
+            this.x = x;
+            this.y = y;
+            this.length = length;
+            this.width = width;
+        }
     }
     public int getX() {
         return x;
