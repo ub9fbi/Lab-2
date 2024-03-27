@@ -4,10 +4,10 @@ public class Circle extends Figur{
 
     private int x, y, R;
 
-    public Circle(int x, int y, int r) {
-        this.x = x;
-        this.y = y;
-        R = r;
+    public Circle() {
+//        this.x = x;
+//        this.y = y;
+//        this.R = r;
     }
 
     public int getR() {
@@ -15,7 +15,7 @@ public class Circle extends Figur{
     }
 
     public void setR(int r) {
-        R = r;
+        this.R = r;
     }
 
     public int getX() {
@@ -35,14 +35,14 @@ public class Circle extends Figur{
     }
 
     @Override
-    public boolean breedExist(int x, int y) {
+    public boolean figurExist(int x, int y) {
         double L = Math.sqrt(Math.pow((x - this.x), 2) + Math.pow((y - this.y), 2));
         return L <= R;
     }
 
     @Override
     public double square() {
-        return Math.PI * Math.pow(R,2);
+        return Math.round(Math.PI * Math.pow(R,2));
     }
 
     @Override

@@ -3,15 +3,13 @@ import java.util.Scanner;
 public class Rectangle extends Figur{
     private int x,y,length,width;
 
-    public Rectangle(int x, int y, int length, int width) {
-        if (width < 0 || length < 0) {
-            System.out.println("Ширина и высота должны быть больше нуля");
-        } else {
-            this.x = x;
-            this.y = y;
-            this.length = length;
-            this.width = width;
-        }
+    public Rectangle() {
+
+//            this.x = x;
+//            this.y = y;
+//            this.length = length;
+//            this.width = width;
+
     }
     public int getX() {
         return x;
@@ -46,7 +44,7 @@ public class Rectangle extends Figur{
     }
 
     @Override
-    public boolean breedExist(int x, int y) {
+    public boolean figurExist(int x, int y) {
         return x >= this.x && x <= (this.x + width) && y >= this.y && y <= (this.y + length);
     }
 

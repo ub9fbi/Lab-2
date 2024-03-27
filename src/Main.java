@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    static ArrayList<Figur> figurArrayList = new ArrayList<Figur>();
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        Figur rectangle = new Rectangle(0,0,0,0);
-        Figur circl = new Circle(0,0,0);
+
         int k = 0;
         while (k < 3) {
             System.out.println("Введите координату точки по x: ");
@@ -16,8 +16,9 @@ public class Main {
             System.out.println("Введите: 1 - создать круг, 2 - создать прямоугольник, 3 - выйти");
             k = scanner.nextInt();
             if (k == 1){
+                figurArrayList.add(new Circle());
                 circl.inputNumbers();
-                if (circl.breedExist(x,y) == true){
+                if (circl.figurExist(x,y) == true){
                     System.out.println("Точка попадает в круг");
                 } else {
                     System.out.println("Точка не попадает в круг");
@@ -25,7 +26,8 @@ public class Main {
                 System.out.println("Площадь круга: " + circl.square());
             } else if (k == 2) {
                 rectangle.inputNumbers();
-                if (rectangle.breedExist(x,y) == true){
+                figurArrayList.add(new Rectangle());
+                if (rectangle.figurExist(x,y) == true){
                     System.out.println("Точка попадает в прямоугольник");
                 } else {
                     System.out.println("Точка не попадает в прямоугольник");
