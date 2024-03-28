@@ -4,10 +4,10 @@ public class Circle extends Figur{
 
     private int x, y, R;
 
-    public Circle() {
-//        this.x = x;
-//        this.y = y;
-//        this.R = r;
+    public Circle(int x, int y, int r) {
+        this.x = x;
+        this.y = y;
+        this.R = r;
     }
 
     public int getR() {
