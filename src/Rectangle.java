@@ -54,6 +54,7 @@ public class Rectangle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
+
         return (pointX > x && x < x + width) && (pointY > y && y < y + length);
     }
 

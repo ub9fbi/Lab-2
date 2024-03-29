@@ -20,25 +20,17 @@ public abstract class Figur {
     public void setPointY(int newPointY) {
         this.pointY = newPointY;
     }
-
-    public Figur(int newPointX, int newPointY) {
-        setPointX(newPointX);
-        setPointY(newPointY);
-    }
     public Figur (){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату точки Х: ");
         int newPointX = scanner.nextInt();
-        setPointX(pointX);
+        setPointX(newPointX);
         System.out.println("Введите координату точки Y: ");
         int newPointY = scanner.nextInt();
-        setPointY(pointY);
+        setPointY(newPointY);
     }
     //проверка существования фигуры
-    protected abstract boolean figurExist(int pointX, int pointY);
+    public abstract boolean figurExist(int pointX, int pointY);
     //определение площади
-
     public abstract double square();
-
-
 }

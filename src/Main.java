@@ -16,10 +16,12 @@ public class Main {
                 Circle circle = new Circle();
                 figurArrayList.add(circle);
                 System.out.println("Площадь круга равна: " + circle.square());
+
             } else if (k == 2) {
                 Rectangle rectangle = new Rectangle();
                 figurArrayList.add(rectangle);
-                System.out.println("Площадь прямоугольника: " + rectangle.square());
+                System.out.println("Площадь прямоугольника равна: " + rectangle.square());
+
             } else if (k == 3) {
                 System.exit(0);
             }

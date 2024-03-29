@@ -5,7 +5,7 @@ public class Circle extends Figur{
     private int x, y, R;
 
     public Circle() {
-        super();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату центра X");
         x = scanner.nextInt();
@@ -44,8 +44,7 @@ public class Circle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-        double L = Math.sqrt(Math.pow((pointX - x), 2) + Math.pow((pointY - y), 2));
-        return L <= R;
+        return R >= Math.sqrt(Math.pow((pointX - x), 2) + Math.pow((pointY - y), 2));
     }
 
     @Override
