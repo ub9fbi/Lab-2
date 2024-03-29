@@ -5,9 +5,17 @@ public class Circle extends Figur{
     private int x, y, R;
 
     public Circle() {
-        this.x = x;
-        this.y = y;
-        this.R = R;
+        super();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите координату центра X");
+        x = scanner.nextInt();
+        setX(x);
+        System.out.println("Введите координату центра Y");
+        y = scanner.nextInt();
+        setY(y);
+        System.out.println("Введите радиус круга");
+        R = scanner.nextInt();
+        setR(R);
     }
 
     public int getR() {
@@ -35,8 +43,8 @@ public class Circle extends Figur{
     }
 
     @Override
-    public boolean figurExist(int newX, int newY) {
-        double L = Math.sqrt(Math.pow((newX - x), 2) + Math.pow((newY - y), 2));
+    public boolean figurExist(int pointX, int pointY) {
+        double L = Math.sqrt(Math.pow((pointX - x), 2) + Math.pow((pointY - y), 2));
         return L <= R;
     }
 

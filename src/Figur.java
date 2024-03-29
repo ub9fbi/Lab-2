@@ -9,33 +9,33 @@ public abstract class Figur {
         return pointX;
     }
 
-    public void setPointX(int newX) {
-        pointX = newX;
+    public void setPointX(int newPointX) {
+        this.pointX = newPointX;
     }
 
     public int getPointY() {
         return pointY;
     }
 
-    public void setPointY(int newY) {
-        setPointY(newY);
+    public void setPointY(int newPointY) {
+        this.pointY = newPointY;
     }
 
-    public Figur(int newX, int newY) {
-        setPointX(newX);
-        setPointY(newY);
+    public Figur(int newPointX, int newPointY) {
+        setPointX(newPointX);
+        setPointY(newPointY);
     }
     public Figur (){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите координату точки Х");
-        int newX = scanner.nextInt();
-        setPointX(newX);
-        System.out.println("Введите координату точки Y");
-        int newY = scanner.nextInt();
-        setPointY(newY);
+        System.out.println("Введите координату точки Х: ");
+        int newPointX = scanner.nextInt();
+        setPointX(pointX);
+        System.out.println("Введите координату точки Y: ");
+        int newPointY = scanner.nextInt();
+        setPointY(pointY);
     }
     //проверка существования фигуры
-    public abstract boolean figurExist(int newX, int newY);
+    protected abstract boolean figurExist(int pointX, int pointY);
     //определение площади
 
     public abstract double square();

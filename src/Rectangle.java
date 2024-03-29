@@ -4,12 +4,21 @@ public class Rectangle extends Figur{
     private int x,y,length,width;
 
     public Rectangle() {
-
-        this.x = x;
-        this.y = y;
-        this.length = length;
-        this.width = width;
-
+        super();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите данные прямоугольника");
+        System.out.println("Координата X нижнего угла: ");
+        x = scanner.nextInt();
+        setX(x);
+        System.out.println("Координата Y нижнего угла: ");
+        y = scanner.nextInt();
+        setY(y);
+        System.out.println("Введите длину");
+        length = scanner.nextInt();
+        setLength(length);
+        System.out.println("Введите ширину");
+        width = scanner.nextInt();
+        setWidth(width);
     }
     public int getX() {
         return x;
@@ -44,8 +53,8 @@ public class Rectangle extends Figur{
     }
 
     @Override
-    public boolean figurExist(int newX, int newY) {
-        return (newX > x && x < x + width) && (newY > y && y < y + length);
+    public boolean figurExist(int pointX, int pointY) {
+        return (pointX > x && x < x + width) && (pointY > y && y < y + length);
     }
 
     @Override
