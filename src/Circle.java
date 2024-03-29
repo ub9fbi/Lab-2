@@ -4,10 +4,10 @@ public class Circle extends Figur{
 
     private int x, y, R;
 
-    public Circle(int x, int y, int r) {
+    public Circle() {
         this.x = x;
         this.y = y;
-        this.R = r;
+        this.R = R;
     }
 
     public int getR() {
@@ -15,7 +15,7 @@ public class Circle extends Figur{
     }
 
     public void setR(int r) {
-        this.R = r;
+        this.R = R;
     }
 
     public int getX() {
@@ -35,27 +35,13 @@ public class Circle extends Figur{
     }
 
     @Override
-    public boolean figurExist(int x, int y) {
-        double L = Math.sqrt(Math.pow((x - this.x), 2) + Math.pow((y - this.y), 2));
+    public boolean figurExist(int newX, int newY) {
+        double L = Math.sqrt(Math.pow((newX - x), 2) + Math.pow((newY - y), 2));
         return L <= R;
     }
 
     @Override
     public double square() {
         return Math.round(Math.PI * Math.pow(R,2));
-    }
-
-    @Override
-    public void inputNumbers() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите координату, x");
-        x = scanner.nextInt();
-        setX(x);
-        System.out.println("Введите координату, y");
-        y = scanner.nextInt();
-        setY(y);
-        System.out.println("Введите радиус, r");
-        R = scanner.nextInt();
-        setR(R);
     }
 }

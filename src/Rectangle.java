@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Rectangle extends Figur{
     private int x,y,length,width;
 
-    public Rectangle(int x,int y, int length, int width) {
+    public Rectangle() {
 
         this.x = x;
         this.y = y;
@@ -44,33 +44,12 @@ public class Rectangle extends Figur{
     }
 
     @Override
-    public boolean figurExist(int x, int y) {
-        return x >= this.x && x <= (this.x + width) && y >= this.y && y <= (this.y + length);
+    public boolean figurExist(int newX, int newY) {
+        return (newX > x && x < x + width) && (newY > y && y < y + length);
     }
 
     @Override
     public double square() {
         return length * width;
-    }
-
-    @Override
-    public void inputNumbers() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите координату, x");
-        x = scanner.nextInt();
-        setX(x);
-
-        System.out.println("Введите координату, y");
-        y = scanner.nextInt();
-        setY(y);
-
-        System.out.println("Введите Длину");
-        length = scanner.nextInt();
-        setLength(length);
-
-        System.out.println("Введите Ширину");
-        width = scanner.nextInt();
-        setWidth(width);
     }
 }
