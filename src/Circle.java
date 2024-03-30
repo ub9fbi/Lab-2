@@ -44,11 +44,11 @@ public class Circle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-        return R >= Math.sqrt(Math.pow((pointX - x), 2) + Math.pow((pointY - y), 2));
+        return R >= Math.sqrt(Math.pow((pointX - getX()), 2) + Math.pow((pointY - getY()), 2));
     }
 
     @Override
     public double square() {
-        return Math.round(Math.PI * Math.pow(R,2));
+        return Math.round(Math.PI * Math.pow(getR(),2));
     }
 }

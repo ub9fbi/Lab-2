@@ -4,7 +4,6 @@ public class Rectangle extends Figur{
     private int x,y,length,width;
 
     public Rectangle() {
-        super();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите данные прямоугольника");
         System.out.println("Координата X нижнего угла: ");
@@ -55,11 +54,11 @@ public class Rectangle extends Figur{
     @Override
     public boolean figurExist(int pointX, int pointY) {
 
-        return (pointX > x && x < x + width) && (pointY > y && y < y + length);
+        return (pointX > getX() && getX() < getX() + getWidth()) && (pointY > getY() && getY() < getY() + getLength());
     }
 
     @Override
     public double square() {
-        return length * width;
+        return getLength() * getWidth();
     }
 }

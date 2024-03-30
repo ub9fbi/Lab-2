@@ -16,6 +16,7 @@ public class Main {
                 Circle circle = new Circle();
                 figurArrayList.add(circle);
                 System.out.println("Площадь круга равна: " + circle.square());
+                System.out.println(" " + figurArrayList.isEmpty(circle.figurExist()));
 
             } else if (k == 2) {
                 Rectangle rectangle = new Rectangle();
