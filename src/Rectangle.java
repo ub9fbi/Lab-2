@@ -3,22 +3,6 @@ import java.util.Scanner;
 public class Rectangle extends Figur{
     private int x,y,length,width;
 
-    public Rectangle() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите данные прямоугольника");
-        System.out.println("Координата X нижнего угла: ");
-        x = scanner.nextInt();
-        setX(x);
-        System.out.println("Координата Y нижнего угла: ");
-        y = scanner.nextInt();
-        setY(y);
-        System.out.println("Введите длину");
-        length = scanner.nextInt();
-        setLength(length);
-        System.out.println("Введите ширину");
-        width = scanner.nextInt();
-        setWidth(width);
-    }
     public int getX() {
         return x;
     }
@@ -53,12 +37,28 @@ public class Rectangle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-
-        return (pointX > getX() && getX() < getX() + getWidth()) && (pointY > getY() && getY() < getY() + getLength());
+        return (pointX >= x && pointX <= (x + width)) && (pointY >= y && pointY <= (y + length));
     }
 
     @Override
     public double square() {
-        return getLength() * getWidth();
+        return length * width;
+    }
+
+    @Override
+    public void inputNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите координату, x");
+        x = scanner.nextInt();
+        setX(x);
+        System.out.println("Введите координату, y");
+        y = scanner.nextInt();
+        setY(y);
+        System.out.println("Введите Длину");
+        length = scanner.nextInt();
+        setLength(length);
+        System.out.println("Введите Ширину");
+        width = scanner.nextInt();
+        setWidth(width);
     }
 }
