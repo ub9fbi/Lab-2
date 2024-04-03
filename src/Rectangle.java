@@ -8,7 +8,10 @@ public class Rectangle extends Figur{
     }
 
     public void setX(int x) {
-        this.x = x;
+        if (x != 0) {
+            this.x = x;
+        } else
+            System.out.println("Значение равно 0");
     }
 
     public int getY() {
@@ -16,7 +19,10 @@ public class Rectangle extends Figur{
     }
 
     public void setY(int y) {
-        this.y = y;
+        if (y != 0) {
+            this.y = y;
+        } else
+            System.out.println("Значение равно 0");
     }
 
     public int getLength() {
@@ -24,7 +30,10 @@ public class Rectangle extends Figur{
     }
 
     public void setLength(int length) {
-        this.length = length;
+        if (length != 0) {
+            this.length = length;
+        } else
+            System.out.println("Значение равно 0");
     }
 
     public int getWidth() {
@@ -32,7 +41,14 @@ public class Rectangle extends Figur{
     }
 
     public void setWidth(int width) {
-        this.width = width;
+        if (width != 0) {
+            this.width = width;
+        } else
+            System.out.println("Значение равно 0");
+    }
+
+    public Rectangle(int pointX, int pointY) {
+        super(pointX, pointY);
     }
 
     @Override
@@ -42,7 +58,7 @@ public class Rectangle extends Figur{
 
     @Override
     public double square() {
-        return length * width;
+        return getLength() * getLength();
     }
 
     @Override

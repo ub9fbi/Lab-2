@@ -2,38 +2,34 @@ import java.util.Scanner;
 
 public class Circle extends Figur{
 
-/*    public Circle(int x, int y, int r) {
-        this.x = x;
-        this.y = y;
-        R = r;
-    }*/
-
     private int x, y, R;
 
-
+    public Circle(int pointX, int pointY) {
+        super(pointX, pointY);
+    }
 
     public int getR() {
         return R;
     }
 
-    public void setR(int r) {
-        this.R = R;
+    public void setR(int abcisR) {
+        this.R = abcisR;
     }
 
     public int getX() {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setX(int abcisX) {
+        this.x = abcisX;
     }
 
     public int getY() {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setY(int abcisY) {
+        this.y = abcisY;
     }
 
     @Override
@@ -50,11 +46,13 @@ public class Circle extends Figur{
     public void inputNumbers() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X центра окружности");
-        x = scanner.nextInt();
+        int abcisX = scanner.nextInt();
+        setX(abcisX);
         System.out.println("Введите координату Y центра окружности");
-        y = scanner.nextInt();
+        int abcisY = scanner.nextInt();
+        setY(abcisY);
         System.out.println("Введите радиус R окружности");
-        R = scanner.nextInt();
-
+        int abcisR = scanner.nextInt();
+        setR(abcisR);
     }
 }
