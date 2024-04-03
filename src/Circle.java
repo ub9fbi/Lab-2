@@ -34,7 +34,7 @@ public class Circle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-        return R >= Math.sqrt(Math.pow((pointX - x), 2) + Math.pow((pointY - y), 2));
+        return R >= Math.sqrt(Math.pow((pointX - getX()), 2) + Math.pow((pointY - getY()), 2));
     }
 
     @Override
@@ -45,6 +45,12 @@ public class Circle extends Figur{
     @Override
     public void inputNumbers() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите координаты точки X");
+        int pointX = scanner.nextInt();
+        setPointX(pointX);
+        System.out.println("Введите координаты точки Y");
+        int pointY = scanner.nextInt();
+        setPointY(pointY);
         System.out.println("Введите координату X центра окружности");
         int abcisX = scanner.nextInt();
         setX(abcisX);

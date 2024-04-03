@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public abstract class Figur {
-    private int pointX, pointY;
-
     public Figur(int pointX, int pointY) {
-        setPointX(pointX);
-        setPointY(pointY);
+        this.pointX = pointX;
+        this.pointY = pointY;
     }
+
+    private int pointX, pointY;
 
     public int getPointX() {
         return pointX;
@@ -25,7 +25,7 @@ public abstract class Figur {
     }
 
     //проверка существования фигуры
-    public abstract boolean figurExist(int pointX, int pointY);
+    protected abstract boolean figurExist(int pointX, int pointY);
     //определение площади
     public abstract double square();
     public abstract void inputNumbers();

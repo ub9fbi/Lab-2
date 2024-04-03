@@ -5,22 +5,18 @@ public class Main {
     static ArrayList<Figur> figurArrayList = new ArrayList<Figur>();
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-
         int k;
-        int pointX;
-        int pointY;
         do {
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Введите: 1 - создать круг, 2 - создать прямоугольник, 3 - выйти");
             k = scanner.nextInt();
 
-            while (!scanner.hasNextInt()) {
-                System.out.println("Не верный ввод ");
-                scanner.next();
-            }
+            int pointX;
+            int pointY;
 
             switch (k) {
                 case 1:
+
                     System.out.println("Введите координату точки X");
                     pointX = scanner.nextInt();
                     System.out.println("Введите координату точки Y");
@@ -33,6 +29,7 @@ public class Main {
                                 ", попадание точки в окружность: " + circle.figurExist(pointX,pointY));
                     }
                     break;
+
                 case 2:
                     System.out.println("Введите координату точки X");
                     pointX = scanner.nextInt();
@@ -45,8 +42,6 @@ public class Main {
                         System.out.println("Площадь прямоугольника: " + figurArrayList.get(i).square() +
                                 ", попадание точки в прямоугольник: " + rectangle.figurExist(pointX,pointY));
                     }
-                    /*System.out.println("Попадание точки в прямоугольник " + rectangle.figurExist(pointX, pointY));
-                    System.out.println("Площадь прямоугольника равна: " + rectangle.square());*/
                     break;
                 case 3:
                     System.exit(0);
