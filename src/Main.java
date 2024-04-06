@@ -16,7 +16,6 @@ public class Main {
 
             switch (k) {
                 case 1:
-
                     System.out.println("Введите координату точки X");
                     pointX = scanner.nextInt();
                     System.out.println("Введите координату точки Y");
@@ -29,7 +28,6 @@ public class Main {
                                 ", попадание точки в окружность: " + circle.figurExist(pointX,pointY));
                     }
                     break;
-
                 case 2:
                     System.out.println("Введите координату точки X");
                     pointX = scanner.nextInt();

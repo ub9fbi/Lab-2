@@ -15,7 +15,10 @@ public class Rectangle extends Figur{
     }
 
     public void setX(int abcisX) {
-        this.x = abcisX;
+        if (abcisX <= 0) {
+            System.out.println("Значение должно быть > 0");
+        } else
+            this.x = abcisX;
     }
 
     public int getY() {
@@ -23,7 +26,10 @@ public class Rectangle extends Figur{
     }
 
     public void setY(int abcisY) {
-        this.y = abcisY;
+        if (abcisY <= 0) {
+            System.out.println("Значение должно быть > 0");
+        } else
+            this.y = abcisY;
     }
 
     public int getLength() {
@@ -31,7 +37,10 @@ public class Rectangle extends Figur{
     }
 
     public void setLength(int inputLength) {
-        this.length = inputLength;
+        if (inputLength <= 0) {
+            System.out.println("Значение должно быть > 0");
+        } else
+            this.length = inputLength;
     }
 
     public int getWidth() {
@@ -39,7 +48,10 @@ public class Rectangle extends Figur{
     }
 
     public void setWidth(int inputWidth) {
-        this.width = inputWidth;
+        if (inputWidth <= 0) {
+            System.out.println("Значение должно быть > 0");
+        } else
+            this.width = inputWidth;
     }
 
     @Override
@@ -59,11 +71,9 @@ public class Rectangle extends Figur{
         int abcisX = scanner.nextInt();
         setX(abcisX);
 
-
         System.out.println("Введите координату, y");
         int abcisY = scanner.nextInt();
         setY(abcisY);
-
 
         System.out.println("Введите Длину");
         int inputLength = scanner.nextInt();
@@ -72,6 +82,5 @@ public class Rectangle extends Figur{
         System.out.println("Введите Ширину");
         int inputWidth = scanner.nextInt();
         setWidth(inputWidth);
-
     }
 }
