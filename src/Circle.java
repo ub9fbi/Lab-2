@@ -20,16 +20,16 @@ public class Circle extends Figur{
         return x;
     }
 
-    public void setX(int abscissaX) {
-        this.x = abscissaX;
+    public void setX(int abcisX) {
+        this.x = abcisX;
     }
 
     public int getY() {
         return y;
     }
 
-    public void setY(int ordinateY) {
-        this.y = ordinateY;
+    public void setY(int abcisY) {
+        this.y = abcisY;
     }
 
     @Override
@@ -45,23 +45,20 @@ public class Circle extends Figur{
     @Override
     public void inputNumbers() {
         Scanner scanner = new Scanner(System.in);
-        /*System.out.println("Введите координаты точки X");
+        System.out.println("Введите координаты точки X");
         int pointX = scanner.nextInt();
         setPointX(pointX);
         System.out.println("Введите координаты точки Y");
         int pointY = scanner.nextInt();
-        setPointY(pointY);*/
-
+        setPointY(pointY);
         System.out.println("Введите координату X центра окружности");
-        int abscissaX = scanner.nextInt();
-        setX(abscissaX);
-
+        int abcisX = scanner.nextInt();
+        setX(abcisX);
         System.out.println("Введите координату Y центра окружности");
-        int ordinateY = scanner.nextInt();
-        setY(ordinateY);
-
+        int abcisY = scanner.nextInt();
+        setY(abcisY);
         System.out.println("Введите радиус R окружности");
-        int R = scanner.nextInt();
-        setR(R);
+        int abcisR = scanner.nextInt();
+        setR(abcisR);
     }
 }

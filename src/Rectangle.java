@@ -15,10 +15,7 @@ public class Rectangle extends Figur{
     }
 
     public void setX(int abcisX) {
-        if (abcisX > 0) {
-            this.x = abcisX;
-        } else
-            System.out.println("Значений переменной X должно быть больше нуля");
+        this.x = abcisX;
     }
 
     public int getY() {
@@ -26,10 +23,7 @@ public class Rectangle extends Figur{
     }
 
     public void setY(int abcisY) {
-        if (abcisY > 0) {
-            this.y = abcisY;
-        } else
-            System.out.println("Значение переменной Y должно быть больше нуля");
+        this.y = abcisY;
     }
 
     public int getLength() {
@@ -37,10 +31,7 @@ public class Rectangle extends Figur{
     }
 
     public void setLength(int inputLength) {
-        if (inputLength > 0) {
-            this.length = inputLength;
-        } else
-            System.out.println("Значение длины должно быть больше нуля");
+        this.length = inputLength;
     }
 
     public int getWidth() {
@@ -48,34 +39,31 @@ public class Rectangle extends Figur{
     }
 
     public void setWidth(int inputWidth) {
-        if (inputWidth > 0) {
-            this.width = inputWidth;
-        } else
-            System.out.println("Значение ширины должно быть больше нуля");
+        this.width = inputWidth;
     }
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-        return (pointX >= getX() && pointX <= (getX() + getWidth())) && (pointY >= getY() && pointY <= (getY() + getLength()));
+        return (pointX >= x && pointX <= (x + width)) && (pointY >= y && pointY <= (y + length));
     }
 
     @Override
     public double square() {
-        return getLength() * getWidth();
+        return length * width;
     }
 
     @Override
     public void inputNumbers() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите координаты левого нижнего угла");
         System.out.println("Введите координату, x");
-
         int abcisX = scanner.nextInt();
         setX(abcisX);
+
 
         System.out.println("Введите координату, y");
         int abcisY = scanner.nextInt();
         setY(abcisY);
+
 
         System.out.println("Введите Длину");
         int inputLength = scanner.nextInt();
