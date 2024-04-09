@@ -15,7 +15,10 @@ public class Rectangle extends Figur{
     }
 
     public void setX(int abcisX) {
-        this.x = abcisX;
+        if (abcisX > 0) {
+            this.x = abcisX;
+        } else
+            System.out.println("Значение должно быть больше нуля!");
     }
 
     public int getY() {
@@ -23,7 +26,10 @@ public class Rectangle extends Figur{
     }
 
     public void setY(int abcisY) {
-        this.y = abcisY;
+        if (abcisY > 0) {
+            this.y = abcisY;
+        } else
+            System.out.println("Значение должно быть больше нуля!");
     }
 
     public int getLength() {
@@ -31,7 +37,10 @@ public class Rectangle extends Figur{
     }
 
     public void setLength(int inputLength) {
-        this.length = inputLength;
+        if (inputLength > 0) {
+            this.length = inputLength;
+        } else
+            System.out.println("Значение должно быть больше нуля!");
     }
 
     public int getWidth() {
@@ -39,7 +48,11 @@ public class Rectangle extends Figur{
     }
 
     public void setWidth(int inputWidth) {
-        this.width = inputWidth;
+        if (inputWidth > 0) {
+            this.width = inputWidth;
+        } else
+            System.out.println("Значение должно быть больше нуля!");
+
     }
 
     @Override
