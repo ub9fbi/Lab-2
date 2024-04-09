@@ -8,19 +8,18 @@ public class Main {
         int k;
         do {
             Scanner scanner = new Scanner(System.in);
+
             System.out.println("Введите: 1 - создать круг, 2 - создать прямоугольник, 3 - выйти");
             k = scanner.nextInt();
-
-            int pointX;
-            int pointY;
+            /*int pointX;
+            int pointY;*/
+            System.out.println("Введите координату точки X");
+            int pointX = scanner.nextInt();
+            System.out.println("Введите координату точки Y");
+            int pointY = scanner.nextInt();
 
             switch (k) {
                 case 1:
-
-                    System.out.println("Введите координату точки X");
-                    pointX = scanner.nextInt();
-                    System.out.println("Введите координату точки Y");
-                    pointY = scanner.nextInt();
                     Circle circle = new Circle(pointX,pointY);
                     figurArrayList.add(circle);
                     circle.inputNumbers();
@@ -28,13 +27,9 @@ public class Main {
                         System.out.println("Площадь круга: " + figurArrayList.get(i).square() +
                                 ", попадание точки в окружность: " + circle.figurExist(pointX,pointY));
                     }
+                    figurArrayList.clear();
                     break;
-
                 case 2:
-                    System.out.println("Введите координату точки X");
-                    pointX = scanner.nextInt();
-                    System.out.println("Введите координату точки Y");
-                    pointY = scanner.nextInt();
                     Rectangle rectangle = new Rectangle(pointX,pointY);
                     figurArrayList.add(rectangle);
                     rectangle.inputNumbers();
@@ -42,6 +37,7 @@ public class Main {
                         System.out.println("Площадь прямоугольника: " + figurArrayList.get(i).square() +
                                 ", попадание точки в прямоугольник: " + rectangle.figurExist(pointX,pointY));
                     }
+                    figurArrayList.clear();
                     break;
                 case 3:
                     System.exit(0);
