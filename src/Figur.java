@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public abstract class Figur {
     private int pointX;
-    public int pointY;
+    private int pointY;
 
     public Figur(int pointX, int pointY) {
         this.pointX = pointX;
