@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
 public abstract class Figur {
+    private int pointX;
+    public int pointY;
+
     public Figur(int pointX, int pointY) {
         this.pointX = pointX;
         this.pointY = pointY;
     }
-
-    private int pointX, pointY;
 
     public int getPointX() {
         return pointX;
