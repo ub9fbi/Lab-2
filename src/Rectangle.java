@@ -44,12 +44,12 @@ public class Rectangle extends Figur{
 
     @Override
     public boolean figurExist(int pointX, int pointY) {
-        return (pointX >= x && pointX <= (x + width)) && (pointY >= y && pointY <= (y + length));
+        return (pointX >= getX() && pointX <= (getX() + getWidth())) && (pointY >= getY() && pointY <= (getY() + getLength()));
     }
 
     @Override
     public double square() {
-        return length * width;
+        return getLength() * getWidth();
     }
 
     @Override
@@ -59,11 +59,9 @@ public class Rectangle extends Figur{
         int abcisX = scanner.nextInt();
         setX(abcisX);
 
-
         System.out.println("Введите координату, y");
         int abcisY = scanner.nextInt();
         setY(abcisY);
-
 
         System.out.println("Введите Длину");
         int inputLength = scanner.nextInt();

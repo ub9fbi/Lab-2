@@ -45,12 +45,6 @@ public class Circle extends Figur{
     @Override
     public void inputNumbers() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите координаты точки X");
-        int pointX = scanner.nextInt();
-        setPointX(pointX);
-        System.out.println("Введите координаты точки Y");
-        int pointY = scanner.nextInt();
-        setPointY(pointY);
         System.out.println("Введите координату X центра окружности");
         int abcisX = scanner.nextInt();
         setX(abcisX);
